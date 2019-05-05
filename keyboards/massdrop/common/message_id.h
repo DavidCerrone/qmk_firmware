@@ -8,11 +8,25 @@
 
 //HID protocol version 1
 enum message_id {
-  message_id_protocol_version = 0x01,
+    message_id_protocol_version = 0x01,
+    message_id_bootloader,
 
-  message_id_set_rgb_mode,
-  message_id_increase_brightness,
-  message_id_decrease_brightness,
+    message_id_increase_brightness,
+    message_id_decrease_brightness,
+
+    message_id_increase_pattern,
+    message_id_decrease_pattern,
+
+    message_id_increase_speed,
+    message_id_decrease_speed,
+
+    message_id_increase_hue,
+    message_id_decrease_hue,
+
+    message_id_increase_sat,
+    message_id_decrease_sat,
+
+    message_id_toggle_mode,
 };
 
 #endif //RAW_ENABLE
