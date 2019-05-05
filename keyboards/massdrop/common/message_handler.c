@@ -47,20 +47,8 @@ void handle_raw_hid_command(uint8_t *data, uint8_t length)
             rgblight_decrease_speed();
             break;
 
-        case message_id_increase_hue:
-            rgblight_increase_hue();
-            break;
-
-        case message_id_decrease_hue:
-            rgblight_decrease_hue();
-            break;
-
-        case message_id_increase_sat:
-            rgblight_increase_sat();
-            break;
-
-        case message_id_decrease_sat:
-            rgblight_decrease_sat();
+        case message_id_set_rgb_hsv_noeeprom:
+            rgblight_sethsv_noeeprom(((uint16_t)((uint16_t)command_data[0] << (uint8_t)8) | (uint16_t)command_data[1]), command_data[2], command_data[3]);
             break;
 
         case message_id_toggle_mode:

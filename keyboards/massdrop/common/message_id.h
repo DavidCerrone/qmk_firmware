@@ -20,11 +20,7 @@ enum message_id {
     message_id_increase_speed,
     message_id_decrease_speed,
 
-    message_id_increase_hue,
-    message_id_decrease_hue,
-
-    message_id_increase_sat,
-    message_id_decrease_sat,
+    message_id_set_rgb_hsv_noeeprom,
 
     message_id_toggle_mode,
 };
